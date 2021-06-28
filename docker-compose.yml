@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  repgen:
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - 8080:8080
+
+networks:
+  default:
+    driver: bridge
+
+
+# docker-compose up -d --build
+# docker exec -ti report-generator_repgen_1 sh
